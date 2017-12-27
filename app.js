@@ -1,9 +1,14 @@
-var express = require("express");
+var express = require('express');
+var path = require('path');
 var app = express();
 var router = express.Router();
-var path = __dirname + '/public';
 
-app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'pug', function() {
+    console.log("View engine is pug");
+});
+
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
 
 router.use(function (req,res,next) {
   console.log("/" + req.method);
@@ -11,7 +16,7 @@ router.use(function (req,res,next) {
 });
 
 router.get("/",function(req,res){
-  res.sendFile(path + "index.html");
+  res.render("/views/index.pug");
 });
 
 app.use("/",router);
@@ -23,3 +28,4 @@ app.use("/",router);
 app.listen(process.env.PORT || 3000,function(){
   console.log("Live at Port 3000");
 });
+
