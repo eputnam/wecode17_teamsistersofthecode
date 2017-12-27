@@ -1,7 +1,10 @@
 # wecode17_teamsistersofthecode
 
+## Overview 
+
 A mobile friendly website that can store and retrieve information on public services to assist person's in housing transit.
 The goal is to make it easier to find friendly, clean, and safe facilities for the target users using crowd sourced data.
+
 * Showers
 * Bathrooms
 * Phone Charging
@@ -12,35 +15,21 @@ Created in response to a challenge issued by the 2017 Portland Hackathon.
 ## Getting started
 
 Clone the repo
-
+```shell
 npm install
+```
+Start node and launch the app
+```shell
+npm start
+```
 
 ### Prerequisites
 
-```
-Node above version 4
-```
-
-
-## Deployment
-
-## Built with
-
-Heroku
-
-## Contributing
-
-Stop and Drop
-
-## Versioning
-
-## Authors
+Node version 4 or greater
 
 ## License
-```
-MIT
-```
+[MIT](LICENSE)
 
 ## Acknoledgements
 
-Team 7 - Sisters of the Code
+Team 7 - Sisters of the Code (WeCode 2017 Portland, OR)
